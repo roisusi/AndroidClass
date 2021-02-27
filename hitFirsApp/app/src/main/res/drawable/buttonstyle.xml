@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The is the Misgeret of the Button-->
+    <stroke android:color="#fff" android:width="3dp"></stroke>
+    <!-- Menifa of the 3 colors-->
+    <gradient android:angle="225"
+        android:startColor="#EA8585"
+        android:centerColor="#5984A6"
+        android:endColor="#DC8B15"></gradient>
+    <!-- Radius of colors Meagel Pinot-->
+    <corners android:radius="10dp"></corners>
+</shape>
