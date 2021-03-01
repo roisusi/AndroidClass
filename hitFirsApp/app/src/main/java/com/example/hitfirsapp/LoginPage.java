@@ -26,7 +26,7 @@ public class LoginPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        this.pref = getApplicationContext().getSharedPreferences("hitFirstApp", MODE_PRIVATE); // for getting
+        this.pref = getApplicationContext().getSharedPreferences("hitFirstApp", MODE_PRIVATE); // for getting and save on computer
         this.editor = this.pref.edit(); // for editing
         mAuth = FirebaseAuth.getInstance();
         setContentView(R.layout.activity_login_page);
@@ -42,7 +42,7 @@ public class LoginPage extends AppCompatActivity {
         else { //clear cache so it not remember you
             editor.putString("email", null);
             editor.putString("password", null);
-            editor.commit();
+            editor.apply();
         }
     }
 
@@ -99,7 +99,7 @@ public class LoginPage extends AppCompatActivity {
     private void setLoginDetails(String email, String password) {
         editor.putString("email", email);
         editor.putString("password", password);
-        editor.commit();
+        editor.apply();
     }
 
     public void cleanLoginDetails() { // call this when logout
